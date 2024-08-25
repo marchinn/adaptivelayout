@@ -1,0 +1,106 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d4d5d0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.App {
+  display: grid;
+  margin: 0;
+}
+
+header,
+footer {
+  background-color: #8328ce;
+  height: 300px;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  margin: 1em;
+  flex-wrap: wrap;
+  grid-gap: 1em;
+}
+
+.card {
+  flex: 1;
+  aspect-ratio: 4/3;
+  border-radius: 30px;
+  color: #d4d5d0;
+  text-align: left;
+  padding: 1em 0 5em 1em;
+}
+h2 {
+  font-size: 8em;
+  margin: 0;
+  line-height: 0.8em;
+}
+p {
+  margin-left: 0.5em;
+}
+@media screen and (min-width: 1200px) {
+  .card {
+    min-width: 30%;
+  }
+  .card:first-child {
+    min-width: 60%;
+    aspect-ratio: 2/1;
+  }
+}
+@media screen and (min-width: 780px) and (max-width: 1200px) {
+  .card {
+    min-width: 40%;
+  }
+  .card:first-child {
+    min-width: 100%;
+    aspect-ratio: 2/1;
+  }
+  .card:last-child{
+    aspect-ratio: 2/1;
+  }
+  h2:not(.card:first-child > h2) {
+    font-size: 6em;
+  }
+}
+@media screen and (max-width: 780px) {
+  .card {
+    min-width: 100%;
+  }
+}
+
+/* sliders */
+#sliders {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  justify-content: center;   align-items: center;
+  display: flex;
+  grid-gap: 1em;
+}
+.slider {
+  border-radius: 30px;
+  height: 300px;
+  background-color: green;
+}
+.active{
+  opacity: 1;
+  z-index: 1;
+  flex:1;
+}
+.passive{
+  flex:0.5;
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+#next,
+#previous {
+  position: relative;
+  top: 280%;
+}
+#next {
+  right: 40%;
+}
+/* sliders  */
